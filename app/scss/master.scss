@@ -1,0 +1,19 @@
+// RESET
+@import './normalize';
+
+// Utilities
+@import './utils/colors',
+        './utils/media',
+        './utils/typography';
+
+// Components
+@import './components/navigation.scss',
+        './components/home';
+
+body {
+  background: $bg-color;
+}
+
+.container {
+  background: green;
+}

@@ -1,0 +1,66 @@
+{
+  "name": "Wesley.is",
+  "version": "1.0.0",
+  "description": "Building Own Site with React",
+  "config": {
+    "buildDir": "./build",
+    "devHost": "localhost",
+    "devPort": 8080
+  },
+  "scripts": {
+    "build": "NODE_ENV=production npm run webpack",
+    "clean": "rimraf $npm_package_config_buildDir && mkdir $npm_package_config_buildDir",
+    "env": "env",
+    "prebuild": "npm run clean",
+    "prestart": "npm install",
+    "start": "NODE_ENV=development node dev-server ./webpack/config",
+    "webpack": "webpack --colors --progress --config ./webpack/config"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Swelly/Projects/mySite.git"
+  },
+  "author": "Wesley Magness",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Swelly/Projects/mySite/issues"
+  },
+  "homepage": "https://github.com/Swelly/Projects/mySite#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.0.3",
+    "babel-core": "^5.8.22",
+    "babel-loader": "^5.3.2",
+    "babel-plugin-rewire": "^0.1.22",
+    "babel-runtime": "^5.8.25",
+    "css-loader": "^0.16.0",
+    "extract-text-webpack-plugin": "^0.8.2",
+    "file-loader": "^0.8.4",
+    "glob": "^5.0.15",
+    "html-loader": "^0.3.0",
+    "http-server": "^0.8.0",
+    "json-loader": "^0.5.3",
+    "lodash": "^3.10.1",
+    "node-libs-browser": "^0.5.3",
+    "node-sass": "^3.2.0",
+    "opn": "^3.0.2",
+    "react-hot-loader": "^1.2.8",
+    "rimraf": "^2.4.3",
+    "sass-loader": "^2.0.1",
+    "source-map-loader": "^0.1.5",
+    "style-loader": "^0.12.3",
+    "svgo": "^0.5.6",
+    "svgo-loader": "^1.1.0",
+    "template-html-loader": "0.0.3",
+    "url-loader": "^0.5.6",
+    "webpack": "^1.11.0",
+    "webpack-dev-server": "^1.10.1"
+  },
+  "dependencies": {
+    "classnames": "^2.1.5",
+    "react": "^0.13.3",
+    "react-router": "^0.13.3"
+  },
+  "engines": {
+    "node": ">=0.12.0"
+  }
+}

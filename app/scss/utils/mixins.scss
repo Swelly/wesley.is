@@ -1,0 +1,51 @@
+// @include borderRadius(4px)
+
+@mixin borderRadius($radius: $default-border-radius) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+// @include textFormat(times, 12px, black)
+@mixin textFormat($family, $size, $color) {
+    font: {
+        size: $size;
+        family: $family;
+        color: $color;
+    };
+}
+
+// @include centerer
+@mixin centerer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// include center-element
+@mixin center-element {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// @include position(absolute, T,R,B,L)
+@mixin position($type, $top: null, $right: null, $bottom: null, $left: null) {
+    position: $type;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+// @include opacity()
+@mixin opacity($opacity) {
+  -moz-opacity: $opacity;
+  -khtml-opacity: $opacity;
+  opacity: $opacity;
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$opacity * 100})";
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=#{$opacity * 100});
+  filter:alpha(opacity=#{$opacity * 100});
+}
