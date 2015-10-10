@@ -1,3 +1,5 @@
+import './navbar.scss';
+
 import React from 'react';
 import { Link } from 'react-router';
 
@@ -43,7 +45,7 @@ export default class Navbar extends React.Component {
     render() {
         let activePath = this.getActivePath();
         return (
-            <ul className={'navbar'}>
+            <ul className={'navigation-bar'}>
                 {this.props.pages.map(
                     this.renderNavItem.bind(this, activePath)
                 )}

@@ -1,6 +1,6 @@
 var path = require('path');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var pkg = require('../package.json');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 var DEV = process.env.NODE_ENV === 'development';
 
@@ -33,21 +33,21 @@ if (DEV) {
   sassParams.push('sourceMap', 'sourceMapContents=true');
   sassLoader = [
     'style-loader',
-    'css-loader?sourceMap&modules&localIdentName=[name]__[local]___[hash:base64:5]',
+    'css-loader?sourceMap',
     'sass-loader?' + sassParams.join('&')
   ].join('!');
   cssLoader = [
     'style-loader',
-    'css-loader?sourceMap&modules&localIdentName=[name]__[local]___[hash:base64:5]'
+    'css-loader?sourceMap'
   ].join('!');
 } else {
   jsxLoader = ['babel-loader?optional[]=runtime&stage=0'];
   sassLoader = ExtractTextPlugin.extract('style-loader', [
-    'css-loader?modules&localIdentName=[hash:base64:5]',
+    'css-loader',
     'sass-loader?' + sassParams.join('&')
   ].join('!'));
   cssLoader = ExtractTextPlugin.extract('style-loader', [
-    'css-loader?modules&localIdentName=[hash:base64:5]'
+    'css-loader'
   ].join('!'));
 }
 

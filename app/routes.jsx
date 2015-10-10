@@ -4,10 +4,10 @@ import React from 'react';
 import Router, {Route, RouteHandler, DefaultRoute} from 'react-router';
 
 // Components to navigate to
-import App from './components/App.jsx';
-import Home from './components/Home.jsx';
-import About from './components/About.jsx';
-import Work from './components/Work.jsx';
+import App from './components/App/App.jsx';
+import Home from './components/Home/Home.jsx';
+import About from './components/About/About.jsx';
+import Work from './components/Work/Work.jsx';
 
 // App describes the layout of the whole site
 // Home is landing page

@@ -3,8 +3,8 @@
 import React from 'react';
 import ReactRouter, {RouteHandler, Link} from 'react-router';
 
-import NavigationStore from '../stores/NavigationStore';
-import Navbar from './partials/_Navbar';
+import NavigationStore from '../../stores/NavigationStore';
+import Navbar from '../Navbar/Navbar';
 
 function getState() {
   return {
