@@ -1,5 +1,37 @@
+@import "toolkit";
 
-$bg-color: #FAFAFA;
 body {
-  background: $bg-color;
+  color: $base-color;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  font-weight: $base-font-weight;
+  overflow: hidden;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {box-sizing: border-box;}
+
+*::selection {
+  background-color: $accent-color;
+  color: #FFF;
+}
+
+input,
+button,
+textarea {
+  appearance: none;
+  background: none;
+  border: none;
+
+  &:focus {outline: 0px transparent;}
+}
+
+img,
+video {display: block;}
+
+svg {
+  display: block;
+  height: 100%;
+  width: 100%;
 }

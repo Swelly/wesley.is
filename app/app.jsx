@@ -1,4 +1,10 @@
 // App JS entry point. Router Run here.
+require.context(
+  "./assets",
+  true,
+  /.*/
+);
+
 import './favicon.ico';
 import './index.html';
 import './scss/normalize.scss';
@@ -9,10 +15,9 @@ import React from 'react';
 import Router from 'react-router';
 import routes from './routes';
 
+// Bind to body
+const mountNode = document.body;
 
-// Grab #app
-const mountNode = document.getElementById('app');
-
-Router.run(routes, function (Handler) {
+Router.run(routes, Router.HashLocation, function (Handler) {
   React.render(<Handler/>, mountNode);
 });

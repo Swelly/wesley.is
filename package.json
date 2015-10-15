@@ -9,6 +9,7 @@
   },
   "scripts": {
     "build": "NODE_ENV=production npm run webpack",
+    "deploy":  "s3cmd put -r build/ s3://wesley.is",
     "clean": "rimraf $npm_package_config_buildDir && mkdir $npm_package_config_buildDir",
     "env": "env",
     "prebuild": "npm run clean",

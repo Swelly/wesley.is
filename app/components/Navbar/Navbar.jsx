@@ -34,11 +34,9 @@ export default class Navbar extends React.Component {
         let className = null;
         if (index === activePath) { className = "-active"; }
         return (
-            <li className={className} key={'page-' + index}>
-                <Link to={page.route}>
-                    {page.title}
-                </Link>
-            </li>
+            <Link to={page.route} className="navLink" key={'page-'+ index}>
+                <image src={'assets/'+page.title+'.svg'} className="navImage"/>
+            </Link>
         );
     }
 
@@ -46,9 +44,15 @@ export default class Navbar extends React.Component {
         let activePath = this.getActivePath();
         return (
             <ul className={'navigation-bar'}>
-                {this.props.pages.map(
-                    this.renderNavItem.bind(this, activePath)
-                )}
+                <div className="logo">
+                    <img src="/assets/W_logo_Black.png" />
+                </div>
+
+                <div className="items">
+                    {this.props.pages.map(
+                        this.renderNavItem.bind(this, activePath)
+                    )}
+                </div>
             </ul>
         );
     }

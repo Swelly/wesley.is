@@ -13,8 +13,8 @@ import Work from './components/Work/Work.jsx';
 // Home is landing page
 export default (
   <Route name="app" path="/" handler={App}>
-    <Route name="about" path="/about" handler={About} />
-    <Route name="work" path="/work" handler={Work} />
+    <Route name="about" path="/cool" handler={About} />
+    <Route name="work" path="/making" handler={Work} />
     <DefaultRoute name="home" handler={Home} />
   </Route>
 );

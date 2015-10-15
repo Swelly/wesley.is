@@ -16,11 +16,14 @@ class App extends React.Component {
 
   state = getState();
 
+
   render() {
+    let currentPath = this.context.router.getCurrentPath();
+
     return (
-      <section>
+      <section className="page-wrapper">
         <Navbar pages={this.state.pages} />
-        <RouteHandler key={this.context.router.getCurrentPath()} />
+        <RouteHandler key={currentPath} />
       </section>
     )
   }
@@ -29,5 +32,7 @@ class App extends React.Component {
 App.contextTypes = {
   router: React.PropTypes.func.isRequired
 };
+
+console.log('%cAhoy there surfer of the internet. If you liked my site let\'s talk!', 'color: #2a2a2c; font-size: 16px; font-weight: italic')
 
 export default App
