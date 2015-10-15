@@ -1,9 +1,16 @@
+// Work Page / portfolio
+
+import './work.scss';
+
 import React from 'react';
 
 class Work extends React.Component {
   render() {
     return (
-      <h1>Work Page</h1>
+      <div className="container typography">
+        <h2>You shall behold</h2>
+        <p>Beautiful and effortless examples of pixel pushing</p>
+      </div>
     )
   }
 }

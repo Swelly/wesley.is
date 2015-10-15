@@ -1,6 +1,5 @@
 @import "toolkit";
 
-
 .navigation-bar {
   margin: 0;
   position: relative;
@@ -9,37 +8,54 @@
   box-sizing: border-box;
 
   .logo {
-    height: 65px;
-    width: 55px;
-    margin: 0 auto;
+    width: 50px;
+    margin: 0;
     img {
       width: 100%;
-      height: 100%;
     }
   }
 
   .items {
     display: inline-block;
-    right: 2.5%;
-    top: 15%;
     position: absolute;
+    top: 45%;
+    right: 2.5%;
+
     .navLink {
-      opacity: 0.65;
+      margin: 0 10px;
       border-bottom: 3px solid transparent;
-      &:hover {
-        opacity: 1;
-        border-bottom: 3px solid #00D318;
-      }
+      @include opacity(0.2);
+      transition: opacity 0.2s ease-in-out;
+
+      &:hover { @include opacity(1); }
     }
+
     .active {
-      opacity: 1;
-      border-bottom: 3px solid #00D318;
+      @include opacity(1);
+      border-bottom: 3px solid #25C6FF;
     }
+
     img {
       display: inline-block;
       width: 30px;
-      margin: 0 15px;
-      padding-bottom: 3px;
+      padding-bottom: 2px;
     }
+  }
+}
+
+@include tablet {
+
+  .navigation-bar {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #F4F4F4;
+
+    .items > .navLink {margin: 0 8px;}
+  }
+}
+
+@include phone {
+
+  .navigation-bar {
+    .items > .navLink {margin: 0 8px;}
   }
 }

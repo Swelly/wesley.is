@@ -1,3 +1,5 @@
+// Top navigation
+
 import './navbar.scss';
 
 import React from 'react';

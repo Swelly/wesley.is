@@ -5,7 +5,6 @@ body {
   font-family: $base-font-family;
   font-size: $base-font-size;
   font-weight: $base-font-weight;
-  overflow: hidden;
   position: relative;
   -webkit-font-smoothing: antialiased;
 }
@@ -33,5 +32,11 @@ video {display: block;}
 svg {
   display: block;
   height: 100%;
+  width: 100%;
+}
+
+.page-wrapper {
+  margin: 0;
+  padding: 0;
   width: 100%;
 }
