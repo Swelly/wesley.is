@@ -1,61 +1,72 @@
 @import "toolkit";
 
 .navigation-bar {
-  margin: 0;
   position: relative;
-  padding: 25px 25px 0;
-  background: #FFF;
+  height: 60px;
+  width: 100%;
+  margin: 0;
+  padding: 10px 80px 0;
+  background: #FAFAFA;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08);
   box-sizing: border-box;
 
   .logo {
-    width: 50px;
-    margin: 0;
+    width: 35px;
+    float: left;
     img {
       width: 100%;
     }
   }
 
   .items {
-    display: inline-block;
-    position: absolute;
-    top: 45%;
-    right: 2.5%;
+    display: block;
+    float: right;
+    margin-top: 6px;
 
     .navLink {
       margin: 0 10px;
-      border-bottom: 3px solid transparent;
+      border-bottom: 2px solid transparent;
       @include opacity(0.2);
-      transition: opacity 0.2s ease-in-out;
+      @include transition(opacity, 0.2s);
 
       &:hover { @include opacity(1); }
     }
 
     .active {
       @include opacity(1);
-      border-bottom: 3px solid #25C6FF;
+      border-bottom: 2px solid $accent-color;
     }
 
     img {
       display: inline-block;
-      width: 30px;
-      padding-bottom: 2px;
+      width: 27px;
     }
   }
 }
 
 @include tablet {
-
   .navigation-bar {
-    padding-bottom: 15px;
-    border-bottom: 1px solid #F4F4F4;
+    padding: 10px 40px;
 
     .items > .navLink {margin: 0 8px;}
   }
 }
 
 @include phone {
-
   .navigation-bar {
-    .items > .navLink {margin: 0 8px;}
+    text-align: center;
+    padding: 10px 0;
+    .logo {display: none;}
+    .items {
+      float: none;
+      width: 100%;
+      margin-top: 6px;
+    }
+    .items > .navLink {margin: 0 7%;border-bottom: none;}
+    .items > .navLink:active {border-bottom: none;}
+    .items > .navLink > img {
+      width: 30px;
+      padding-bottom: 0;
+    }
   }
 }

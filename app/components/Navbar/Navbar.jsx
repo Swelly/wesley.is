@@ -5,6 +5,8 @@ import './navbar.scss';
 import React from 'react';
 import { Link } from 'react-router';
 
+import Logo from './Logo.jsx';
+
 export default class Navbar extends React.Component {
     state = {
         activePath: null
@@ -37,17 +39,23 @@ export default class Navbar extends React.Component {
         if (index === activePath) { className = "-active"; }
         return (
             <Link to={page.route} className="navLink" key={'page-'+ index}>
-                <image src={'assets/'+page.title+'.svg'} className="navImage"/>
+                <image src={'assets/'+page.title+'.svg'} className={"navImage " + page.title}/>
             </Link>
         );
     }
 
     render() {
         let activePath = this.getActivePath();
+        let strokeStyle = {
+          stroke: "#000",
+          fill: "none",
+          strokeWidth: "28px",
+          strokeLinecap: "round"
+        }
         return (
             <ul className={'navigation-bar'}>
-                <div className="logo">
-                    <img src="/assets/W_logo_Black.png" />
+                <div className="logo" title="Wesley V. Magness">
+                    <Logo />
                 </div>
 
                 <div className="items">

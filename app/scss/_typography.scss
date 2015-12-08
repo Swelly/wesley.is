@@ -47,7 +47,7 @@
        url("/../assets/fonts/moonbold-webfont.woff") format("woff"),
        url("/../assets/fonts/moonbold-webfont.ttf") format("truetype"),
        url("/../assets/fonts/moonbold-webfont.svg#moonbold") format("svg");
-  font-weight: 600;
+  font-weight: 700;
 }
 
 ////   BASE FONTS   ////
@@ -118,7 +118,7 @@ code, .code {
 .loud  { font-color: $loud-color; }
 
 .italic { font-style: italic; }
-.bold   { font-weight: 700; @extend .loud; }
+.bold   { font-weight: 700 !important; }
 
 // Lists & Blocks
 .block-margins { margin: 1em 0; }

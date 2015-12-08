@@ -1,5 +1,4 @@
 // Work Page / portfolio
-
 import './work.scss';
 
 import React from 'react';

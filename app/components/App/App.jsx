@@ -6,22 +6,33 @@ import ReactRouter, {RouteHandler, Link} from 'react-router';
 import NavigationStore from '../../stores/NavigationStore';
 import Navbar from '../Navbar/Navbar';
 
+
 function getState() {
   return {
     pages: NavigationStore.getAll()
   };
 }
 
-class App extends React.Component {
 
+class App extends React.Component {
   state = getState();
 
+  setPageHeight() {
+    let windowHeight = window.innerHeight;
+    let page = document.getElementsByClassName('page-wrapper')[0];
+    console.log(page);
+    page.setAttribute('style','height:'+windowHeight+'px');
+  }
+
+  componentDidMount() {
+    this.setPageHeight()
+  }
 
   render() {
     let currentPath = this.context.router.getCurrentPath();
 
     return (
-      <section className="page-wrapper center">
+      <section className="page-wrapper">
         <Navbar pages={this.state.pages} />
         <RouteHandler key={currentPath} />
       </section>

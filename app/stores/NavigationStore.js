@@ -23,16 +23,16 @@ let store = new NavigationStore();
 
 store.setAll([{
   route: 'home',
-  title: 'Home',
-  image: '../../assets/about.png'
+  title: 'Home'
 }, {
   route: 'about',
-  title: 'About',
-  image: '../../assets/about.png'
+  title: 'About'
 }, {
   route: 'work',
-  title: 'Work',
-  image: '../../assets/about.png'
+  title: 'Work'
+}, {
+  route: 'photos',
+  title: 'Photos'
 }]);
 
 export default store;

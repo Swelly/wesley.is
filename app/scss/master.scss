@@ -1,6 +1,8 @@
 @import "toolkit";
 
 body {
+  min-width: 320px;
+  background-color: $bg-color;
   color: $base-color;
   font-family: $base-font-family;
   font-size: $base-font-size;

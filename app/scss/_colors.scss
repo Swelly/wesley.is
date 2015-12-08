@@ -5,11 +5,9 @@
 // Important Colors
 $base-color:        #515B5E;
 $secondary-color:   #2E3233;
-$accent-color:      #17EBF7;
+$accent-color:      #3CB5FA;
 
-$bg-color:          #FFFEFC;
-
-$border-color:      #E2E3DF;
+$bg-color:          #ECEFF4;
 
 // $secondary-color:
 
@@ -34,7 +32,7 @@ $color-heading: $secondary-color;
 /* * * * * * * * * * * * * * * * * * * * */
 
 /* Borders */
-$border-color: #D2DCE1;
+$border-color: #EEE;
 $border-color-dark: darken($border-color, 40%);
 $border-color-light: lighten($border-color, 10%);
 

@@ -8,6 +8,7 @@ import App from './components/App/App.jsx';
 import Home from './components/Home/Home.jsx';
 import About from './components/About/About.jsx';
 import Work from './components/Work/Work.jsx';
+import Photos from './components/Photos/Photos.jsx';
 
 // App describes the layout of the whole site
 // Home is landing page
@@ -15,6 +16,7 @@ export default (
   <Route name="app" path="/" handler={App}>
     <Route name="about" path="/cool" handler={About} />
     <Route name="work" path="/making" handler={Work} />
+    <Route name="photos" path="/photos" handler={Photos} />
     <DefaultRoute name="home" handler={Home} />
   </Route>
 );
