@@ -8,7 +8,7 @@ class Photos extends React.Component {
     return (
       <div className="container typography">
         <h2>Photos</h2>
-        <p>Lot's of them. With Cows, and trees.</p>
+        <p>Lots of pretty rectangles</p>
       </div>
     )
   }

@@ -11,7 +11,7 @@ class Home extends React.Component {
         <div className="intro-header">
           <h2 className="bold">Hi, I'm Wesley</h2>
           <p>
-            Front-End Developer | Identity && Product Designer
+            Maker | Product Designer
           </p>
         </div>
         <div className="intro-content">
