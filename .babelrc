@@ -1,0 +1,23 @@
+// 20170907084417
+// https://raw.githubusercontent.com/Swelly/react-webpack-babel/master/.babelrc
+
+{
+  "presets": [
+    "es2015",
+    "react"
+  ],
+  "plugins": [
+    "transform-runtime",
+    "transform-decorators-legacy",
+    "transform-class-properties"
+  ],
+  "env": {
+    "test": {
+      "plugins": [
+        "transform-runtime",
+        "transform-decorators-legacy",
+        "transform-class-properties"
+      ]
+    }
+  }
+}
